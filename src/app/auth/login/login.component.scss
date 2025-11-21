@@ -1,0 +1,100 @@
+/* Fundo com gradiente */
+.login-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(135deg, #0050A6, #1597A7, #24C0B9);
+}
+
+/* Card central */
+.login-card {
+  background: white;
+  width: 420px;
+  height: 380px;
+  padding: 32px;
+  border-radius: 0px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  font-weight: 400;
+}
+
+.logo {
+  width: 120px;
+  margin-top: 10px;
+}
+
+.subtitle {
+  font-size: 14px;
+  margin-bottom: 12px;
+  color: #005DA9;
+  font-weight: 400;
+  margin-top: -3px;
+}
+
+.instructions {
+  color: #4d7880;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+/* Inputs Caixa */
+.form-group {
+  position: relative;
+  margin-bottom: 18px;
+
+  .icon {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    font-size: 22px;
+    color: #4d7880;
+  }
+
+  input {
+    width: 85%;
+    padding: 12px 12px 12px 40px;
+    border: none;
+    border-bottom: 1px solid #F39200;
+    font-size: 16px;
+    background: none;
+    outline: none;
+
+    &:focus {
+      border-bottom: 2px solid #DB6E00;
+    }
+  }
+}
+
+/* Botão Caixa */
+.btn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: #F39200;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    background: #DB6E00;
+  }
+}
+
+/* Erro */
+.error {
+  margin-top: 12px;
+  color: #e74c3c;
+  font-weight: 400;
+}
+
+/* Responsivo */
+@media (max-width: 480px) {
+  .login-card {
+    width: 90%;
+    padding: 24px;
+  }
+}

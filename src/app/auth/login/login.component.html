@@ -1,0 +1,33 @@
+<div class="login-page">
+  <div class="login-card">
+
+    <img src="assets/logo-caixa-extenso.png" class="logo">
+
+    <p class="subtitle">Login Caixa</p>
+    <p class="instructions">Informe seu e-mail e sua senha para continuar.</p>
+
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+
+      <!--email-->
+      <div class="form-group">
+        <span class="material-icons icon">person</span>
+        <input type="email" placeholder="E-mail" formControlName="email" />
+      </div>
+
+      <!--senha -->
+      <div class="form-group">
+        <span class="material-icons icon">lock</span>
+        <input type="password" placeholder="Senha" formControlName="senha"
+        />
+      </div>
+
+      <button type="submit" class="btn">Entrar</button>
+
+      <div *ngIf="loginForm.errors?.['invalidCredentials']" class="error">
+        E-mail ou senha inválidos.
+      </div>
+
+
+    </form>
+  </div>
+</div>

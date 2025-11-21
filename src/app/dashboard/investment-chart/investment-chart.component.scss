@@ -1,0 +1,21 @@
+h2 {
+  margin: 0 0 16px 0;
+  font-size: 1.4rem;
+  color: #093672; // Azul Caixa (aprox)
+}
+.chart-section{
+  background: white;
+  padding: 20px;
+  border-radius: 6px;
+  margin-top: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  max-width: auto;
+}
+.chart-card {
+  background: rgb(255, 255, 255);
+  padding: 20px;
+  border-radius: 12px;
+  margin-top: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  max-width: 500px;
+}

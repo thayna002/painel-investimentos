@@ -1,0 +1,24 @@
+<header class="header">
+
+  <div class="left">
+    <img src="assets/logo-caixa.png" class="logo">
+    <span class="divider"></span>
+    <div class="title-group">
+      <span class="brand">CXINVEST</span>
+      <span class="subtitle">Painel do Investidor</span>
+    </div>
+  </div>
+
+  <div class="right" (click)="toggleMenu()">
+    <span class="material-symbols-outlined profile-icon">account_circle</span>
+    <span class="profile-text">Perfil</span>
+  </div>
+</header>
+
+<!-- MENU LATERAL -->
+<div class="side-card" *ngIf="menuOpen" (click)="logout()">
+  <span class="material-symbols-outlined">logout</span>
+  <span>Sair</span>
+</div>
+
+<div class="overlay" *ngIf="menuOpen" (click)="toggleMenu()"></div>

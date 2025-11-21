@@ -1,0 +1,73 @@
+{
+  "Conservador": [
+    {
+      "id": 101,
+      "name": "Tesouro Selic 2027",
+      "type": "Tesouro Direto",
+      "profitability": 0.10,
+      "risk": "Baixo"
+    },
+    {
+      "id": 102,
+      "name": "CDB Caixa Liquidez Diária",
+      "type": "CDB",
+      "profitability": 0.11,
+      "risk": "Baixo"
+    },
+    {
+      "id": 103,
+      "name": "LCI Caixa 2026",
+      "type": "LCI",
+      "profitability": 0.115,
+      "risk": "Baixo"
+    }
+  ],
+
+  "Moderado": [
+    {
+      "id": 201,
+      "name": "Tesouro IPCA+ 2030",
+      "type": "Tesouro Direto",
+      "profitability": 0.12,
+      "risk": "Médio"
+    },
+    {
+      "id": 202,
+      "name": "CDB Caixa 2028",
+      "type": "CDB",
+      "profitability": 0.13,
+      "risk": "Médio"
+    },
+    {
+      "id": 203,
+      "name": "Fundo Multimercado Caixa Alpha",
+      "type": "Fundo Multimercado",
+      "profitability": 0.14,
+      "risk": "Médio"
+    }
+  ],
+
+  "Agressivo": [
+    {
+      "id": 301,
+      "name": "Ações Petrobras (PETR4)",
+      "type": "Renda Variável",
+      "profitability": 0.18,
+      "risk": "Alto"
+    },
+    {
+      "id": 302,
+      "name": "Ações Vale (VALE3)",
+      "type": "Renda Variável",
+      "profitability": 0.20,
+      "risk": "Alto"
+    },
+    {
+      "id": 303,
+      "name": "Fundo de Ações Caixa Small Caps",
+      "type": "Fundo de Ações",
+      "profitability": 0.22,
+      "risk": "Alto"
+    }
+  ]
+}

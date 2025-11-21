@@ -1,0 +1,50 @@
+<div  class="simulator-card">
+  <div id="simulator">
+    <h2>Simulador de Investimento</h2>
+
+    <form [formGroup]="simulationForm" (ngSubmit)="simulate()">
+
+      <div class="form-group">
+        <label for="value">Valor da aplicação (R$)</label>
+        <input id="value" type="number" formControlName="value" placeholder="Ex: 1000">
+      </div>
+
+      <div class="form-group">
+        <label for="months">Prazo (meses)</label>
+        <input id="months" type="number" formControlName="months" placeholder="Ex: 12">
+      </div>
+
+      <div class="form-group">
+        <label for="type">Tipo de Investimento</label>
+        <input id="type" type="text" formControlName="type" [disabled]="true">
+
+      </div>
+
+      <button class="simulate-btn" type="submit">Simular</button>
+    </form>
+  </div>
+  
+  <!-- RESULTADO -->
+  <div class="result" *ngIf="result">
+    <h3>Resultado da Simulação</h3>
+    <p><strong>Valor Final: </strong> R$ {{ result.finalValue | number:'1.2-2' }}</p>
+    <p><strong>Rentabilidade: </strong> {{ (result.profitability * 100) | number:'1.0-2' }}% </p>
+    <p><strong>Detalhes: </strong> {{ result.details }}</p>
+</div>
+<div class="history" *ngIf="history.length > 0">
+
+ <h3>Histórico de Simulações</h3>
+  <div class="item" *ngFor="let sim of history">
+    <div><strong>Data: </strong> {{ sim.createdAt | date:'dd/MM/yyyy HH:mm' }}</div>
+    <div><strong>Tipo: </strong> {{ sim.type }}</div>
+    <div><strong>Valor Inicial: </strong> 
+      R$ {{ sim.value | number:'1.2-2' }}
+    </div>
+    <div><strong>Valor Final: </strong> 
+      R$ {{ sim.finalValue | number:'1.2-2' }}
+    </div>
+    <div><strong>Prazo: </strong> {{ sim.months }} meses</div>
+    <div><strong>Detalhes: </strong> {{ sim.details }}</div>
+  </div>
+
+</div>

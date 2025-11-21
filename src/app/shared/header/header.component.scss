@@ -1,0 +1,144 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  color: white;
+  background: linear-gradient(90deg, #0a4fa0, #0bb1a1);
+
+  .divider {
+      width: 1px;
+      height: 26px;
+      background-color: rgba(255, 255, 255, 0.6); /* igual ao SIDSC */
+      display: inline-block;
+      padding-top: 5px;
+ 
+    }
+
+  .left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    .logo {
+      height: 25px;
+      padding-top: 5px;
+    }
+
+    .title-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      .brand {
+        font-size: 22px;
+        font-weight: 700;
+      }
+
+      .subtitle {
+        font-size: 18px;
+        opacity: 0.9;
+      }
+   }
+  }
+
+ .right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .profile-icon {
+      font-size: 32px;
+      cursor: pointer;
+    }
+
+    .profile-text {
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+
+ @media (max-width: 480px) {
+   .header {
+    padding: 12px;}
+    .left {
+      display: flex;
+      align-items: flex-start;   /* Alinha tudo à esquerda */
+     
+        .logo {
+          height: 20px;
+          padding-top: 6px;
+        }
+        .divider {
+          padding-top: 6px;}
+    }
+    .left .title-group {
+      display: flex;
+      flex-direction: column;    /* quebra em DUAS LINHAS */
+      align-items: flex-start;   /* textos alinhados à esquerda */
+      gap: 0;
+  }
+   .left .title-group .brand {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  .left .title-group .subtitle {
+    font-size: 16px;
+    margin-top: 0px;
+    opacity: 0.9;
+  }
+    .right .profile-text {
+    display: none;
+  }
+  }
+}
+
+/* Fundo escuro ao abrir menu */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.2);
+  backdrop-filter: blur(1px);
+  z-index: 8;
+}
+
+/* Card lateral */
+.side-card {
+  position: fixed;
+  top: 80px; /* aparece abaixo do header */
+  right: 10px;
+  width: 140px;
+  padding: 12px 14px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  z-index: 9;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 16px;
+
+  animation: slideIn 0.15s ease-out;
+
+  span {
+    color: #0a4fa0;
+    font-weight: 600;
+  }
+
+  .material-symbols-outlined {
+    font-size: 22px;
+    color: #0a4fa0;
+  }
+
+  &:hover {
+    background: #f4f4f4;
+  }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(10px); }
+  to   { opacity: 1; transform: translateX(0); }
+}

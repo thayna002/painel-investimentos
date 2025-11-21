@@ -1,0 +1,73 @@
+{
+  "1": [
+    {
+      "id": 1,
+      "type": "Tesouro Selic 2027",
+      "value": 4000,
+      "profitability": 0.10,
+      "date": "2025-01-12"
+    },
+    {
+      "id": 2,
+      "type": "CDB Liquidez Diária",
+      "value": 3000,
+      "profitability": 0.11,
+      "date": "2025-02-05"
+    },
+    {
+      "id": 3,
+      "type": "LCI Caixa 2026",
+      "value": 2500,
+      "profitability": 0.09,
+      "date": "2025-03-01"
+    }
+  ],
+
+  "2": [
+    {
+      "id": 1,
+      "type": "Tesouro IPCA+ 2030",
+      "value": 2000,
+      "profitability": 0.12,
+      "date": "2025-01-20"
+    },
+    {
+      "id": 2,
+      "type": "CDB Caixa 2028",
+      "value": 3500,
+      "profitability": 0.13,
+      "date": "2025-02-17"
+    },
+    {
+      "id": 3,
+      "type": "Fundo Multimercado Alpha",
+      "value": 2800,
+      "profitability": 0.14,
+      "date": "2025-03-10"
+    }
+  ],
+
+  "3": [
+    {
+      "id": 1,
+      "type": "Ações Petrobras (PETR4)",
+      "value": 3000,
+      "profitability": 0.18,
+      "date": "2025-01-10"
+    },
+    {
+      "id": 2,
+      "type": "ETF BOVA11",
+      "value": 4500,
+      "profitability": 0.20,
+      "date": "2025-02-15"
+    },
+    {
+      "id": 3,
+      "type": "Fundo de Ações Small Caps",
+      "value": 3800,
+      "profitability": 0.22,
+      "date": "2025-03-08"
+    }
+  ]
+}

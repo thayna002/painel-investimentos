@@ -1,1 +1,12 @@
-<p>dashboard.component works!</p>
+<app-header></app-header>
+
+
+
+<div>
+  <app-risk-profile [profile]="profile"></app-risk-profile>
+  <app-product-list [products]="products" (simulate)="onSimulate($event)" ></app-product-list>
+  <app-investment-simulator [product]="selectedProduct"></app-investment-simulator>
+  <app-investment-chart></app-investment-chart>
+</div>
+
+<app-footer></app-footer>

@@ -1,0 +1,17 @@
+[
+  {
+    "email": "conservador@caixa.com",
+    "senha": "123",
+    "clientId": 1
+  },
+  {
+    "email": "moderado@caixa.com",
+    "senha": "123",
+    "clientId": 2
+  },
+  {
+    "email": "agressivo@caixa.com",
+    "senha": "123",
+    "clientId": 3
+  }
+]

@@ -1,0 +1,137 @@
+.product-section {
+  margin-top: 10px ;
+  padding: 16px;
+  width: auto;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border: 1px solid #e1e1e1;
+  border-radius: 6px;
+}
+h2 {
+  margin: 0 0 16px 0;
+  font-size: 1.4rem;
+  color: #093672; // Azul Caixa (aprox)
+}
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  gap: 16px;
+  padding: 10px 0;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/*cel*/
+.product-card {
+  flex: 0 0 90%;
+  max-width: 90%;
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.08);
+  scroll-snap-align: center;
+}
+/*tablet*/
+@media (min-width: 768px) {
+  .product-card {
+    flex: 0 0 45%;
+    max-width: 45%;
+  }
+}
+/* DESKTOP*/
+@media (min-width: 1200px) {
+  .product-card {
+    flex: 0 0 30%;
+    max-width: 30%;
+  }
+}
+.product-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Titulos */
+.product-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #0a4fa0;
+}
+
+/* Texto */
+.product-card p {
+  font-size: 16px;
+  margin: 6px 0;
+}
+
+.product-card strong {
+  font-weight: 700;
+  color: #000;
+}
+
+/* risco */
+.risk-badge {
+  padding: 4px 12px;
+  font-size: 14px;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Cores do risco */
+.risk-badge.baixo {
+  background: #34a853;   
+}
+
+.risk-badge.medio {
+  background: #fbbc04;  
+  color: #333;
+}
+
+.risk-badge.alto {
+  background: #ea4335;   
+}
+
+/* button simular */
+.simulate-btn {
+  width: 100%;
+  margin-top: 18px;
+  padding: 14px;
+  
+  background: #ffb300; 
+  border: none;
+  border-radius: 12px;
+
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.simulate-btn:hover {
+  background: #ffa000;
+}
+
+/* Paginação dots*/
+.dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 8px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #0a4fa0;
+}

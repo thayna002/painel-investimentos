@@ -1,0 +1,22 @@
+{
+  "1": {
+    "clientId": 1,
+    "profile": "Conservador",
+    "description": "Perfil focado em segurança, prioriza menor risco e estabilidade.",
+    "score": 30
+  },
+
+  "2": {
+    "clientId": 2,
+    "profile": "Moderado",
+    "description": "Perfil equilibrado entre segurança e retorno.",
+    "score": 65
+  },
+
+  "3": {
+    "clientId": 3,
+    "profile": "Agressivo",
+    "description": "Perfil com alta tolerância a risco, buscando maiores retornos.",
+    "score": 90
+  }
+}

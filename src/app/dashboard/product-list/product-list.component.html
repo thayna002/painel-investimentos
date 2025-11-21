@@ -1,0 +1,26 @@
+<div class="product-section">
+  <h2>Produtos Recomendados</h2>
+
+  <div class="carousel" #carousel (scroll)="onScroll()">
+    <div class="product-card" *ngFor="let p of products">
+      <h3>{{ p.name }}</h3>
+
+      <p><strong>Tipo:</strong> {{ p.type }}</p>
+      <p><strong>Rentabilidade:</strong> {{ (p.profitability * 100) | number:'1.0-0' }}%</p>
+      <p><strong>Risco:</strong> {{ p.risk }}</p>
+
+      <button class="simulate-btn" (click)="simulateProduct(p)">
+        Simular
+      </button>
+    </div>
+  </div>
+
+  <div class="dots" *ngIf="pages > 1">
+    <span
+      class="dot"
+      *ngFor="let p of [].constructor(pages); let i = index"
+      [class.active]="i === currentPage"
+      (click)="goToPage(i)">
+    </span>
+  </div>
+</div>

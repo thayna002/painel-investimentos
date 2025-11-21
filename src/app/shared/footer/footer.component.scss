@@ -1,0 +1,37 @@
+.footer {
+  width: 100%;
+  padding: 14px 20px;
+  background: linear-gradient(90deg, #0a4fa0, #0bb1a1);
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  box-sizing: border-box;
+
+  .footer-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .footer-logo {
+    height: 18px;
+      }
+
+  .footer-title {
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .footer {
+    padding: 12px;
+
+    .footer-title {
+      font-size: 11px;
+    }
+  }
+}

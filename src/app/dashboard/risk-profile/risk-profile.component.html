@@ -1,0 +1,39 @@
+<div class="risk-card">
+
+  <h2>Perfil de Risco</h2>
+
+  
+
+  <!-- Conteúdo -->
+  <div *ngIf="profile" class="content">
+
+    <div class="row">
+      <span class="label">Perfil:</span>
+
+      <span class="value profile-badge"
+            [ngClass]="{
+              'conservative': profile.profile === 'Conservador',
+              'moderate': profile.profile === 'Moderado',
+              'aggressive': profile.profile === 'Agressivo'
+            }">
+        {{ profile.profile }}
+      </span>
+    </div>
+
+    <div class="row">
+      <span class="label">Descrição:</span>
+      <span class="value">{{ profile.description }}</span>
+    </div>
+
+    <div class="row">
+        <span class="label">Pontuação:</span>
+        <span class="value">{{ profile.score }}/100</span>
+    </div>
+
+    <div class="score-bar">
+    <div class="fill" [style.width.%]="profile.score"></div>
+    </div>
+
+  </div>
+
+</div>
