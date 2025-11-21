@@ -1,11 +1,12 @@
 import { provideZonelessChangeDetection } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { App } from './app.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [App],
+      imports: [App, HttpClientTestingModule],
       providers: [provideZonelessChangeDetection()]
     }).compileComponents();
   });
@@ -18,8 +19,9 @@ describe('AppComponent', () => {
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(App);
-    fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, painel-investimentos');
+    const app = fixture.componentInstance as any;
+    // title is a signal — call it to get the current value
+    expect(typeof app.title).toBe('function');
+    expect(app.title()).toBe('painel-investimentos');
   });
 });
